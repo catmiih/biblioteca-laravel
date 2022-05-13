@@ -40,6 +40,7 @@ Route::get('/listar-produto/{id}', function($id){
 Route::get('/editar-produto/id{id}', function(Request $request, $id){
     //dd(Produto::find($id)); //debug and die
     $produto = Produto::find($id);
+    return view('editar',['produto' => $produto]);
 });
 
 Route::post('/editar-produto/{id}', function(Request $request, $id){
@@ -56,3 +57,4 @@ Route::post('/editar-produto/{id}', function(Request $request, $id){
     echo "Produto editado com sucesso!";
 
 });
+
