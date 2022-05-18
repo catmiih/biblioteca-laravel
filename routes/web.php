@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('inicio');
 });
 
+Route::get('/cadastro', function () {
+    return view('cadastro');
+});
+
 Route::post('/cadastrar-produto', function(Request $request){
 
     Produto::create([
@@ -56,5 +60,13 @@ Route::post('/editar-produto/{id}', function(Request $request, $id){
 
     echo "Produto editado com sucesso!";
 
+});
+
+Route::get('/excluir-produto/{id}',function($id){
+    //dd($request->all());
+    $produto = Produto::find($id);
+    $produto->delete();
+
+    echo "Produto excluido com sucesso!";
 });
 

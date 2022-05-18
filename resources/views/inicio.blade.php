@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,28 +8,16 @@
     <title>Produtos</title>
 </head>
 
-<body>
-    <h1>Produtos</h1>
+<body style="text-align: center;">
+    <h1>Bem vindo a Biblioteca Laravel!</h1>
 
-    <form action="/cadastrar-produto" method="POST">
-        @csrf
-        <label for="lblName">Nome:</label>
-        <input type="text" name="nome">
+    <div>
+        | &nbsp; <a href="/cadastro">Cadastrar</a> &nbsp; | &nbsp;
+        <a href="/listar-produto/1">Listar ID 1</a> &nbsp; | &nbsp;
+        <a href="/editar-produto/id1">Editar ID 1</a> &nbsp; | &nbsp;
+        <a href="/excluir-produto/1">Excluir ID 1</a> &nbsp; |
+    </div>
 
-        <br><br>
-
-        <label for="lblValor">Valor:</label>
-        <input type="text" name="valor">
-
-        <br><br>
-
-        <label for="lblQuantidade">Quantidade:</label>
-        <input type="text" name="estoque">
-        
-        <br><br>
-
-        <button>Cadastrar</button>
-    </form>
 </body>
 
 </html>
