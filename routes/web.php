@@ -24,6 +24,7 @@ Route::get('/cadastro', function () {
     return view('cadastro');
 });
 
+
 Route::post('/cadastrar-produto', function(Request $request){
 
     Produto::create([
@@ -33,10 +34,22 @@ Route::post('/cadastrar-produto', function(Request $request){
     ]);
 
     echo "Produto criado com sucesso!";
+
+    echo '</br></br> <a href="/">Voltar para o início</a>';
+});
+
+Route::get('/listar-produto', function(Request $request){
+    
+    $id = $request->input('id');
+
+    //TRANSFORMAR EM STRING E PASSAR PRO LINK
+
+    return view('/listar-produto/{$id}');
 });
 
 Route::get('/listar-produto/{id}', function($id){
     //dd(Produto::find($id)); //debug and die
+
     $produto = Produto::find($id);
     return view('listar', ['produto' => $produto]);
 });
@@ -59,6 +72,7 @@ Route::post('/editar-produto/{id}', function(Request $request, $id){
     ]);
 
     echo "Produto editado com sucesso!";
+    echo '</br></br> <a href="/">Voltar para o início</a>';
 
 });
 
@@ -68,5 +82,6 @@ Route::get('/excluir-produto/{id}',function($id){
     $produto->delete();
 
     echo "Produto excluido com sucesso!";
+    echo '</br></br> <a href="/">Voltar para o início</a>';
 });
 

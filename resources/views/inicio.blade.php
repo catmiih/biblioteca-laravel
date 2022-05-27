@@ -12,10 +12,20 @@
     <h1>Bem vindo a Biblioteca Laravel!</h1>
 
     <div>
-        | &nbsp; <a href="/cadastro">Cadastrar</a> &nbsp; | &nbsp;
-        <a href="/listar-produto/1">Listar ID 1</a> &nbsp; | &nbsp;
-        <a href="/editar-produto/id1">Editar ID 1</a> &nbsp; | &nbsp;
-        <a href="/excluir-produto/1">Excluir ID 1</a> &nbsp; |
+
+        <form action="/listar-produto" method="get">
+            <label for="id"><input type="number" name="id" id="id" class="id"></label>
+
+            <button>eeeeeeeeeee</button>
+        </form>
+
+        <br>
+
+        | &nbsp;
+        <a href="/cadastro">Cadastrar</a> &nbsp; | &nbsp;
+        <a href="/listar-produto/">Listar</a> &nbsp; | &nbsp;
+        <a href="/editar-produto/id1">Editar</a> &nbsp; | &nbsp;
+        <a href="/excluir-produto/1">Excluir</a> &nbsp; |
     </div>
 
 </body>

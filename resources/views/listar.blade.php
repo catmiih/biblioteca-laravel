@@ -27,6 +27,7 @@
 
         <br><br>
 
+        <a href="/">Voltar para o início</a>
     </form>
 
 </body>
